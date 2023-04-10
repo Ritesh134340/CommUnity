@@ -1,7 +1,5 @@
 
-# Recipe Web Application Using MERN Stack 
-
-Community Social Media App
+ # Community Social Media App
 This is a web application built with ReactJS that allows users to create,update,view and delete posts.
      New user can also be created updated and deleted.
      User can see details of a post created by other users.
@@ -13,8 +11,11 @@ Getting Started
 
 Prerequisites
 Node.js (v10 or higher)
+
 npm or yarn
+
 Installation
+
 Clone the repository: git clone https://github.com/Ritesh134340/CommUnity.git
 
 Install dependencies: npm install or yarn install
@@ -37,9 +38,9 @@ This will run all the tests located in the ./test directory.
 ##Frontend Deployed Link :
 https://social-community-application.netlify.app
 
-##Backend Deployed Link :
+##Backend Deployed Link : https://outstanding-yoke-colt.cyclic.app
 
-https://outstanding-yoke-colt.cyclic.app
+
 ## Features :-
 
 *Features
