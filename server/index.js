@@ -1,11 +1,17 @@
+
+require("dotenv").config();
 const express = require("express");
 const connection = require("./config/db");
 const app = express();
 const cors = require("cors");
-const PORT = process.env.PORT || 27017;
+const PORT = process.env.PORT || 8000;
+
+const usersRoute=require("./routes/user.route")
+const postsRoute= require('./routes/post.route');
+const analyticsRoute=require("./routes/analytics.route")
 
 
-require("dotenv").config();
+
 
 
 app.use(cors());
@@ -16,11 +22,14 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
+
 app.get("/", async (req, res) => {
   res.send({ mesg: "Welcome to CommUnity" });
 });
 
-
+app.use("/users",usersRoute)
+app.use('/posts', postsRoute);
+app.use("/analytics",analyticsRoute)
 
 
 app.listen(PORT, async () => {
@@ -34,3 +43,5 @@ app.listen(PORT, async () => {
 
   console.log("app is running in port ", PORT);
 });
+
+module.exports=app
