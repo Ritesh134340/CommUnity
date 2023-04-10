@@ -4,7 +4,7 @@ const express = require("express");
 const connection = require("./config/db");
 const app = express();
 const cors = require("cors");
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 const usersRoute=require("./routes/user.route")
 const postsRoute= require('./routes/post.route');
@@ -32,7 +32,7 @@ app.use('/posts', postsRoute);
 app.use("/analytics",analyticsRoute)
 
 
-app.listen(process.env.PORT || 3000, async () => {
+app.listen(PORT, async () => {
   try {
     await connection;
     console.log("Database connection Successful");
