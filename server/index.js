@@ -32,7 +32,7 @@ app.use('/posts', postsRoute);
 app.use("/analytics",analyticsRoute)
 
 
-app.listen(PORT || 3000, async () => {
+app.listen(process.env.PORT || 3000, async () => {
   try {
     await connection;
     console.log("Database connection Successful");
